@@ -1,113 +1,388 @@
 import Image from "next/image";
+import Link from 'next/link';
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+return (
+  <main>
+
+    <div className="min-h-screen bg-[#FFF9F4]">
+      <header className="p-4 flex justify-between items-center">
+        <div className="text-2xl font-cursive text-[#FFB830]">FoodHouse</div>
+        <nav>
+          <ul className="flex space-x-12 text-[20px] gap-[30px] my-[42px]" >
+            <li><Link href="/" className="text-[#FFB830]">HOME</Link></li>
+            <li><Link href="/restaurant" className="text-gray-500">RESTAURANT</Link></li>
+            <li><Link href="/services" className="text-gray-500">SERVICES</Link></li>
+            <li><Link href="/cart" className="text-gray-500">CART</Link></li>
+          </ul>
+        </nav>
+        <button className="text-gray-500 text-[23px] mr-[53px]">Sign In</button>
+      </header>
+
+
+
+
+      <main className="container mx-auto px-4 py-12 flex">
+        <div className="w-1/2 pr-9 my-[100px]">
+          <h1 className="text-6xl font-bold mb-4">
+            Enjoy Delicious<br />
+            Food in <span className="text-[#FFB830]">Helthy Life</span>
+          </h1>
+          <p className="mb-text-gray-900 font-light text-[25px] my-[53px] ">
+            Tandoori masala is an Indian spice blend consisting of a
+            variety of spices Tandoori masala is an Indian spice blend
+            consisting of a variety of spices
+          </p>
+          <button className="my-[60px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[25px] rounded-lg">
+            ORDER NOW
+          </button>
+        </div>
+        <div className="w-1/2 relative">
+          <Image
+            src="/chicken.png"
+            alt="Roasted Chicken"
+            width={600}
+            height={11}
+            className="rounded-full"
+          />
+
+
+
+
+        </div>
+      </main>
+    </div>
+
+
+    <div className="font-bold  mt-8 text-center text-[45px]">
+      <p className="italic">Online store</p>
+      <h1 className="font-bold text-center text-[45px]">Popular Foods  </h1>
+      <div className="border-b-4 border-yellow-400 w-20 mx-auto mb-12"></div>
+    </div>
+
+    <div className="flex ml-[100px] my-[43px] ">
+      <div className="w-1/2 relative text-centre">
+        <Image
+          src="/chicken.jpeg"
+          alt="Roasted Chicken"
+          width={300}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[54px] " >Fruit Dish</p>
+        <br />
+        <p className="ml-[74px] font-light">Dinko Food</p>
+        <br />
+        <p className="ml-[74px]">&#11088;&#11088;&#11088;&#11088;</p>
+        <button className="my-[30px] ml-[40px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[15px] rounded-full">
+          Add to cart  $ 678
+        </button>
+
+
+      </div>
+      <div className="w-1/2 relative ml-[73px] ">
+        <Image
+          src="/fruitdish.jpeg"
+          alt="Roasted Chicken"
+          width={300}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[64px] " >Fruit Dish</p>
+        <br />
+        <p className="ml-[74px] font-light">Dinko Food</p>
+        <br />
+        <p className="ml-[74px]">&#11088;&#11088;&#11088;&#11088;</p>
+        <button className="my-[30px] ml-[40px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[15px] rounded-full">
+          Add to cart  $ 678
+        </button>
+
+      </div>
+      <div className="w-1/2 relative">
+        <Image
+          src="/fish.jpeg"
+          alt="Roasted Chicken"
+          width={300}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[64px] " >Fruit Dish</p>
+        <br />
+        <p className="ml-[74px] font-light">Dinko Food</p>
+        <br />
+        <p className="ml-[74px]">&#11088;&#11088;&#11088;&#11088;</p>
+        <button className="my-[30px] ml-[40px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[15px] rounded-full">
+          Add to cart  $ 678
+        </button>
+
+      </div>
+
+      <div className="w-1/2 relative">
+        <Image
+          src="/pizza.jpeg"
+          alt="Roasted Chicken"
+          width={300}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[64px] " >Fruit Dish</p>
+        <br />
+        <p className="ml-[74px] font-light">Dinko Food</p>
+        <br />
+        <p className="ml-[74px]">&#11088;&#11088;&#11088;&#11088;</p>
+        <button className="my-[30px] ml-[40px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[15px] rounded-full">
+          Add to cart  $ 678
+        </button>
+
+      </div>
+    </div>
+
+    <div className="min-h-screen bg-[#FFF9F4]">
+  
+      <main className="container mx-auto px-4 py-12 flex">
+        <div className="w-1/2 pr-9 my-[100px]">
+          <h1 className="text-6xl font-bold mb-4">
+            Enjoy Delicious<br />
+            Food in <span className="text-[#FFB830]">Helthy Life</span>
+          </h1>
+          <p className="mb-text-gray-900 font-light text-[25px] my-[53px] ">
+            Tandoori masala is an Indian spice blend consisting of a
+            variety of spices Tandoori masala is an Indian spice blend
+            consisting of a variety of spices
+          </p>
+          <button className="my-[60px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[25px] rounded-lg">
+            ORDER NOW
+          </button>
+        </div>
+        <div className="w-1/2 relative">
+          <Image
+            src="/chickens.png"
+            alt="Roasted Chicken"
+            width={600}
+            height={11}
+            className="rounded-full"/>
+
+        </div>
+      </main>
+    </div>
+
+
+    <div className="font-bold  mt-8 text-center text-[45px]">
+      <p className="italic">Online store</p>
+      <h1 className="font-bold text-center text-[45px]">Popular Foods  </h1>
+      <div className="border-b-4 border-yellow-400 w-20 mx-auto mb-12"></div>
+    </div>
+
+    <div className="text-center pt-10">
+    <h6>Quality Food</h6>
+    <h1 className="font-extrabold text-6xl pt-10">Get The Best Offers</h1>
+    <p className="pt-10 text-3xl">Rhe food at your doorstep. Why starve when you have us. You hunger <br /> partner. Straight out of the oven to your doorstep.</p>
+    </div>
+
+    <div className="flex  pl-80 gap-80 ">
+       <div className="flex ">
+         <div className="pt-20">
+           <h2>Any day offers</h2>
+           <p>New phenomenon <br/> Burger taste</p>
+           <p>$12.90</p>
+           </div>
+           <div>
+             <img src="burger.jpeg" alt="" />
+           </div>
+       </div>
+       <div className="flex" >
+         <div className="pt-20">
+           <h2>Other flavors</h2>
+           <p>Save room. <br/> We madesalats</p>
+           <p>$12.90</p>
+           </div>
+           <div>
+             <img src="burger.jpeg" alt="" />
+           </div>
+       </div>
+       <div className="flex">
+         <div className="pt-20">
+           <h2>Find a poco <br/> store near you</h2>
+           <p>$12.90</p>
+           </div>
+           <div className="image">
+               <img src='burger.jpeg'></img>
+           </div>
+       </div>
+      </div>
+
+
+
+
+      <div className="flex ml-[100px] my-[43px] ">
+      <div className="w-1/2 relative text-centre">
+        <Image
+          src="/restaurants.png"
+          alt="Roasted Chicken"
+          width={150}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[54px] " >55+ Restaurants</p>
+        <br />
+        </div>
+      <div className="w-1/2 relative ml-[73px] ">
+        <Image
+          src="/goodquality.png"
+          alt="Roasted Chicken"
+          width={150}
+          height={11}
+          className="rounded-full"
+        />
+        <p className="text-[30px] font-medium ml-[64px] " >Good Quality</p>
+        <br />
+      </div>
+      <div className="w-1/2 relative">
+        <Image
+          src="/discountsystem.jpeg"
+          alt="Roasted Chicken"
+          width={200}
+          height={11}
+          className="rounded-full"/>
+        <p className="text-[30px] font-medium ml-[64px] " >Discount system</p>
+        <br />
+        </div>
+
+      <div className="w-1/2 relative">
+        <Image
+          src="/fastdelivery.jpeg"
+          alt="Roasted Chicken"
+          width={200}
+          height={11}
+          className="rounded-full"
+        />
+        <p className="text-[30px] font-medium ml-[64px] " >Fast Delivery</p>
+        <br />
+       </div>
+    </div>
+
+    <main className="container mx-auto px-4 py-12 flex">
+
+
+    <div className="w-1/2 relative">
+          <Image
+            src="/phoneapp.jpeg"
+            alt="Roasted Chicken"
+            width={400}
+            height={11} />
+
+        </div>
+        <div className="w-1/2 pr-9 my-[100px]">
+          <h1 className="text-6xl font-bold mb-4">
+            Enjoy Delicious<br />
+            Food in <span className="text-[#FFB830]">Helthy Life</span>
+          </h1>
+          <p className="mb-text-gray-900 font-light text-[25px] my-[53px] ">
+            Tandoori masala is an Indian spice blend consisting of a
+            variety of spices Tandoori masala is an Indian spice blend
+            consisting of a variety of spices
+          </p>
+          <div className="flex">
+        <Image
+        src="/appstore2.png"
+        alt="play store"
+        width={250}
+        height={8} />
+
+        <Image
+        src="/googleplay.png"
+        alt=""
+        width={250}
+        height={8}/>
+
+        </div>
+        </div>
+       
+      </main>
+
+      <div className="flex gap-80 pl-60">
+
+       <div>
+         <h1>
+           Subscribe our newsletter
+         </h1>
+         <p>
+           Subscribe on our newsletter to get our <br />
+           news
+         </p>
+        </div>
+
+         <div>
+           <input type="email" name="email" placeholder="Your email address"/>
+           <button className="my-[30px] ml-[40px] bg-yellow-500 text-neutral-100 min-w-[200px] text-amber-500 min-h-[65px] text-[15px]">
+         Subscribe
+        </button>
+         </div>
+
+      </div>
+
+
+    <footer className="bg-[#1a0f0f] text-white">
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h2 className="text-2xl font-bold mb-4">FoodHouse.</h2>
+          <p className="text-sm text-gray-400 mb-4">
+            Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60 minutes.
+          </p>
+          <div className="flex space-x-4">
+          
+          </div>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Company</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
+            <li><Link href="#">Career</Link></li>
+            <li><Link href="#">About Us</Link></li>
+            <li><Link href="#">Blog</Link></li>
+            <li><Link href="#">Press Info</Link></li>
+            <li><Link href="#">Features</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Fudo</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
+            <li><Link href="#">Why Fudo</Link></li>
+            <li><Link href="#">How it Works</Link></li>
+            <li><Link href="#">Why Choose Us</Link></li>
+            <li><Link href="#">Client Stories</Link></li>
+            <li><Link href="#">Gallery</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Menu</h3>
+          <ul className="space-y-2 text-sm text-gray-400">
+            <li><Link href="#">Breakfast</Link></li>
+            <li><Link href="#">Lunch</Link></li>
+            <li><Link href="#">Dinner</Link></li>
+            <li><Link href="#">Fast Foods</Link></li>
+            <li><Link href="#">Drinks</Link></li>
+          </ul>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    </div>
+    <div className="bg-yellow-400 py-4 text-center text-[#1a0f0f]">
+      <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+        <p className="color-white">Copyright 2021 Besnik All Right Reserved</p>
+        <div className="space-x-4">
+          <Link href="#" className="hover:underline">Terms</Link>
+          <Link href="#" className="hover:underline">Privacy</Link>
+          <Link href="#" className="hover:underline">Security</Link>
+        </div>
       </div>
+    </div>
+  </footer>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+  </main>
+);
 }
+
+
+
+
+
+
+
+
+
